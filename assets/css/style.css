@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    height: 100vh;
+}
+
+li {
+    list-style-type: none;
+}
+
+section {
+    height: 90vh;
+    margin: 1em, 3em;
+}
+
+
+.coded {
+    background-color: red;
+    border: 1px solid black;
+    min-height: 100%;
+
+}
+
+.container {
+    display: flex;
+}
+
+.container-header {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    
+}
+
+.container-header > div {
+    border: 1px solid black;
+    padding: auto;
+    margin: 0;
+}
+
+
+.container-aside {
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    min-width: fit-content;
+}
+
+.container-aside > span {
+    border: 1px solid black;
+    padding: auto;
+    margin: 0;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+
+}
+
+.container-grid {
+    display: grid;
+    background-color: beige;
+    grid-template-columns: auto auto auto;
+}
+
+
+.day-slot {
+    width: 100%;
+    text-align: center;
+}
+.day-slot > * {
+    border-radius: 1px solid black;
+}
+
+.day-timeslot {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+
+.total-hours-day {
+    color: white;
+}
+
+.time-button {
+    padding: 0;
+    margin: 0;
+    height: 6.6vh;
+}
+
+.header-text > h3 {
+    border: 1px solid black;
+
+}
+
+.time-text {
+    height: 6.6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
