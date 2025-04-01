@@ -11,87 +11,83 @@
     <body>
         <headers>
             <nav>
-                <a>Employee</a>
-                <button>Date and time</button>
+                 <div class="event-popup">
+                    <form>
+                        <select name="event-day" id='event-day'>
+                            <option value="monday">Monday</option>
+                            <option value="tuesday">Tuesday</option>
+                            <option value="wednesday">Wednesday</option>
+                            <option value="thursday">Thursday</option>
+                            <option value="friday">Friday</option>
+                            <option value="saturday">Saturday</option>
+                            <option value="sunday">Sunday</option>
+                        </select>
+                        <label>Choose a time</label>
+                        <select name="start-time" id="start-time-select">
+                            <option value="1" class="time-tab" id="start-time">9:00 AM</option>
+                            <option value="2" class="time-tab" id="start-time">9:30 AM</option>
+                            <option value="3" class="time-tab" id="start-time">10:00 AM</option>
+                            <option value="4" class="time-tab" id="start-time">10:30 AM</option>
+                            <option value="5" class="time-tab" id="start-time">11:00 AM</option>
+                            <option value="6" class="time-tab" id="start-time">11:30 AM</option>
+                            <option value="7" class="time-tab" id="start-time">12:00 PM</option>
+                            <option value="8" class="time-tab" id="start-time">12:30 PM</option>
+                            <option value="9" class="time-tab" id="start-time">1:00 PM</option>
+                            <option value="10" class="time-tab" id="start-time">1:30 PM</option>
+                            <option value="11" class="time-tab" id="start-time">2:00 PM</option>
+                            <option value="12" class="time-tab" id="start-time">2:30 PM</option>
+                            <option value="13" class="time-tab" id="start-time">3:00 PM</option>
+                            <option value="14" class="time-tab" id="start-time">3:30 PM</option>
+                            <option value="15" class="time-tab" id="start-time">4:00 PM</option>
+                            <option value="16" class="time-tab" id="start-time">4:30 PM</option>
+                            <option value="17" class="time-tab" id="start-time">5:00 PM</option>
+                            <option value="18" class="time-tab" id="start-time">5:30 PM</option>
+                            <option value="19" class="time-tab" id="start-time">6:00 PM</option>
+                            <option value="20" class="time-tab" id="start-time">6:30 PM</option>
+                            <option value="21" class="time-tab" id="start-time">7:00 PM</option>
+                            <option value="22" class="time-tab" id="start-time">7:30 PM</option>
+                            <option value="23" class="time-tab" id="start-time">8:00 PM</option>
+                            <option value="24" class="time-tab" id="start-time">8:30 PM</option>
+                            <option value="25" class="time-tab" id="start-time">9:00 PM</option>
+                        </select>
+                          <label>-</label>
+                        <select name="end-time" id="end-time-select">
+                            <option value="1" class="time-tab" id="end-time">9:00 AM</option>
+                            <option value="2" class="time-tab" id="end-time">9:30 AM</option>
+                            <option value="3" class="time-tab" id="end-time">10:00 AM</option>
+                            <option value="4" class="time-tab" id="end-time">10:30 AM</option>
+                            <option value="5" class="time-tab" id="end-time">11:00 AM</option>
+                            <option value="6" class="time-tab" id="end-time">11:30 AM</option>
+                            <option value="7" class="time-tab" id="end-time">12:00 PM</option>
+                            <option value="8" class="time-tab" id="end-time">12:30 PM</option>
+                            <option value="9" class="time-tab" id="end-time">1:00 PM</option>
+                            <option value="10" class="time-tab" id="end-time">1:30 PM</option>
+                            <option value="11" class="time-tab" id="end-time">2:00 PM</option>
+                            <option value="12" class="time-tab" id="end-time">2:30 PM</option>
+                            <option value="13" class="time-tab" id="end-time">3:00 PM</option>
+                            <option value="14" class="time-tab" id="end-time">3:30 PM</option>
+                            <option value="15" class="time-tab" id="end-time">4:00 PM</option>
+                            <option value="16" class="time-tab" id="end-time">4:30 PM</option>
+                            <option value="17" class="time-tab" id="end-time">5:00 PM</option>
+                            <option value="18" class="time-tab" id="end-time">5:30 PM</option>
+                            <option value="19" class="time-tab" id="end-time">6:00 PM</option>
+                            <option value="20" class="time-tab" id="end-time">6:30 PM</option>
+                            <option value="21" class="time-tab" id="end-time">7:00 PM</option>
+                            <option value="22" class="time-tab" id="end-time">7:30 PM</option>
+                            <option value="23" class="time-tab" id="end-time">8:00 PM</option>
+                            <option value="24" class="time-tab" id="end-time">8:30 PM</option>
+                            <option value="25" class="time-tab" id="end-time">9:00 PM</option>
+                        </select>
+                        <button typ="submit" onclick="getEvent(event)">Create</button>
+                       
+                        <script src="assets/js/app.js"></script>
+                    </form>
+                 </div>
             </nav>
         </headers>
 
         <section>
-            <div class="coded box">
-                <div class="container-header">
-                    <div class="day-slot">
-                        <span class="header-text"><h3>Time</h3></span>
-                        <div class="day-timeslot">
-                            <span class="time-text">9:00 AM</span>
-                            <span class="time-text">10:00 AM</span>
-                            <span class="time-text">11:00 AM</span>
-                            <span class="time-text">12:00 PM</span>
-                            <span class="time-text">1:00 PM</span>
-                            <span class="time-text">2:00 PM</span>
-                            <span class="time-text">3:00 PM</span>
-                            <span class="time-text">4:00 PM</span>
-                            <span class="time-text">5:00 PM</span>
-                            <span class="time-text">6:00 PM</span>
-                            <span class="time-text">7:00 PM</span>
-                            <span class="time-text">8:00 PM</span>
-                            <span class="time-text">9:00 PM</span>
-                        </div>
-                    </div>
-                    <div class="day-slot">
-                        <span class="header-text"><h3>Mon</h3></span>
-                        <div class="day-timeslot">
-                            <button class="time-button" id="button-id">+</button>
-                            <button class="time-button" id="button-id">+</button>
-                            <button class="time-button" id="button-id">+</button>
-                            <button class="time-button" id="button-id">+</button>
-                            <button class="time-button" id="button-id">+</button>
-                            <button class="time-button" id="button-id">+</button>
-                            <button class="time-button" id="button-id">+</button>
-                            <button class="time-button" id="button-id">+</button>
-                            <button class="time-button" id="button-id">+</button>
-                            <button class="time-button" id="button-id">+</button>
-                            <button class="time-button" id="button-id">+</button>
-                            <button class="time-button" id="button-id">+</button>
-                            <button class="time-button" id="button-id">+</button>
-        
-                            <span class="total-hours-day">hoursd</span>
-                        </div>
-                    </div>
-
-              
-                    <div class="day-slot">
-                        <span>Wed</span>
-                        <div class="day-timeslot">
-                            
-                        </div>
-                    </div>
-                    <div class="day-slot">
-                        <span>Thu</span>
-                        <div class="day-timeslot">
-                            
-                        </div>
-                    </div>
-                    <div class="day-slot">
-                        <span>Fri</span>
-                        <div class="day-timeslot">
-                            
-                        </div>
-                    </div>
-                    <div class="day-slot">
-                        <span>Sat</span>
-                        <div class="day-timeslot">
-                            
-                        </div>
-                    </div>
-                    <div class="day-slot">
-                        <span>Sun</span>
-                        <div class="day-timeslot">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-           
+            
         </section>
 
         <footer>
