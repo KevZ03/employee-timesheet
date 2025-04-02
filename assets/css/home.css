@@ -1,0 +1,38 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr 9fr;
+    text-align: center;
+
+    justify-items: stretch;
+    align-items: stretch;
+    background-color: aqua;
+    margin: 1em;
+    border: 1px solid black;
+
+
+
+
+}
+
+.container-header{
+    max-height: 50px;
+    align-self: center;
+    justify-self: center;
+
+
+}
+
+
+
+.grid-rows {
+    border: 1px solid black;
+    
+}
+
+.container-grid-block {
+    border: 1px solid black;
+    margin: 5px;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+}
