@@ -11,3 +11,21 @@ body {
     border: 1px solid black;   
     
 }
+
+
+.filled-event-tab {
+    background-color: rgb(119, 78, 78);
+    cursor: pointer;
+    box-sizing: border-box;
+
+    justify-content: stretch;
+    align-content: stretch;
+    position: absolute;
+    display: flex;
+    width: 90%;
+    height: 60px;
+    border-radius: 1vw;
+    border: .5px solid black;
+    z-index: 1;
+    
+}

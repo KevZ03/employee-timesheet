@@ -6,8 +6,8 @@
         <title>Wage Calculator</title>
         <link rel="stylesheet" href="assets/css/home.css"> 
         <link rel="stylesheet" href="assets/css/style.css"> 
-
-    </head>
+        <script src="assets/js/event_generator.js"></script>
+    </head> 
     <body>
         <headers>
             <nav>
@@ -23,64 +23,113 @@
                             <option value="sunday">Sunday</option>
                         </select>
                         <label>Choose a time</label>
-                        <select name="start-time" id="start-time-select">
+                        <select class="drop-down-date" name="start-time" id="start-time-select">
                             <option value="1" class="time-tab" id="start-time">9:00 AM</option>
-                            <option value="2" class="time-tab" id="start-time">9:30 AM</option>
-                            <option value="3" class="time-tab" id="start-time">10:00 AM</option>
-                            <option value="4" class="time-tab" id="start-time">10:30 AM</option>
-                            <option value="5" class="time-tab" id="start-time">11:00 AM</option>
-                            <option value="6" class="time-tab" id="start-time">11:30 AM</option>
-                            <option value="7" class="time-tab" id="start-time">12:00 PM</option>
-                            <option value="8" class="time-tab" id="start-time">12:30 PM</option>
-                            <option value="9" class="time-tab" id="start-time">1:00 PM</option>
-                            <option value="10" class="time-tab" id="start-time">1:30 PM</option>
-                            <option value="11" class="time-tab" id="start-time">2:00 PM</option>
-                            <option value="12" class="time-tab" id="start-time">2:30 PM</option>
-                            <option value="13" class="time-tab" id="start-time">3:00 PM</option>
-                            <option value="14" class="time-tab" id="start-time">3:30 PM</option>
-                            <option value="15" class="time-tab" id="start-time">4:00 PM</option>
-                            <option value="16" class="time-tab" id="start-time">4:30 PM</option>
-                            <option value="17" class="time-tab" id="start-time">5:00 PM</option>
-                            <option value="18" class="time-tab" id="start-time">5:30 PM</option>
-                            <option value="19" class="time-tab" id="start-time">6:00 PM</option>
-                            <option value="20" class="time-tab" id="start-time">6:30 PM</option>
-                            <option value="21" class="time-tab" id="start-time">7:00 PM</option>
-                            <option value="22" class="time-tab" id="start-time">7:30 PM</option>
-                            <option value="23" class="time-tab" id="start-time">8:00 PM</option>
-                            <option value="24" class="time-tab" id="start-time">8:30 PM</option>
-                            <option value="25" class="time-tab" id="start-time">9:00 PM</option>
+                            <option value="2" class="time-tab" id="start-time">9:15 AM</option>
+                            <option value="3" class="time-tab" id="start-time">9:30 AM</option>
+                            <option value="4" class="time-tab" id="start-time">9:45 AM</option>
+                            <option value="5" class="time-tab" id="start-time">10:00 AM</option>
+                            <option value="6" class="time-tab" id="start-time">10:15 AM</option>
+                            <option value="7" class="time-tab" id="start-time">10:30 AM</option>
+                            <option value="8" class="time-tab" id="start-time">10:45 AM</option>
+                            <option value="9" class="time-tab" id="start-time">11:00 AM</option>
+                            <option value="10" class="time-tab" id="start-time">11:15 AM</option>
+                            <option value="11" class="time-tab" id="start-time">11:30 AM</option>
+                            <option value="12" class="time-tab" id="start-time">11:45 AM</option>
+                            <option value="13" class="time-tab" id="start-time">12:00 PM</option>
+                            <option value="14" class="time-tab" id="start-time">12:15 PM</option>
+                            <option value="15" class="time-tab" id="start-time">12:30 PM</option>
+                            <option value="16" class="time-tab" id="start-time">12:45 PM</option>
+                            <option value="17" class="time-tab" id="start-time">1:00 PM</option>
+                            <option value="18" class="time-tab" id="start-time">1:15 PM</option>
+                            <option value="19" class="time-tab" id="start-time">1:30 PM</option>
+                            <option value="20" class="time-tab" id="start-time">1:45 PM</option>
+                            <option value="21" class="time-tab" id="start-time">2:00 PM</option>
+                            <option value="22" class="time-tab" id="start-time">2:15 PM</option>
+                            <option value="23" class="time-tab" id="start-time">2:30 PM</option>
+                            <option value="24" class="time-tab" id="start-time">2:45 PM</option>
+                            <option value="25" class="time-tab" id="start-time">3:00 PM</option>
+                            <option value="26" class="time-tab" id="start-time">3:15 PM</option>
+                            <option value="27" class="time-tab" id="start-time">3:30 PM</option>
+                            <option value="28" class="time-tab" id="start-time">3:45 PM</option>
+                            <option value="29" class="time-tab" id="start-time">4:00 PM</option>
+                            <option value="30" class="time-tab" id="start-time">4:15 PM</option>
+                            <option value="31" class="time-tab" id="start-time">4:30 PM</option>
+                            <option value="32" class="time-tab" id="start-time">4:45 PM</option>
+                            <option value="33" class="time-tab" id="start-time">5:00 PM</option>
+                            <option value="34" class="time-tab" id="start-time">5:15 PM</option>
+                            <option value="35" class="time-tab" id="start-time">5:30 PM</option>
+                            <option value="36" class="time-tab" id="start-time">5:45 PM</option>
+                            <option value="37" class="time-tab" id="start-time">6:00 PM</option>
+                            <option value="38" class="time-tab" id="start-time">6:15 PM</option>
+                            <option value="39" class="time-tab" id="start-time">6:30 PM</option>
+                            <option value="40" class="time-tab" id="start-time">6:45 PM</option>
+                            <option value="41" class="time-tab" id="start-time">7:00 PM</option>
+                            <option value="42" class="time-tab" id="start-time">7:15 PM</option>
+                            <option value="43" class="time-tab" id="start-time">7:30 PM</option>
+                            <option value="44" class="time-tab" id="start-time">7:45 PM</option>
+                            <option value="45" class="time-tab" id="start-time">8:00 PM</option>
+                            <option value="46" class="time-tab" id="start-time">8:15 PM</option>
+                            <option value="47" class="time-tab" id="start-time">8:30 PM</option>
+                            <option value="48" class="time-tab" id="start-time">8:45 PM</option>
+                            <option value="49" class="time-tab" id="start-time">9:00 PM</option>
                         </select>
-                          <label>-</label>
-                        <select name="end-time" id="end-time-select">
+                        <label>-</label>
+                        <select class="drop-down-date" name="end-time" id="end-time-select">
                             <option value="1" class="time-tab" id="end-time">9:00 AM</option>
-                            <option value="2" class="time-tab" id="end-time">9:30 AM</option>
-                            <option value="3" class="time-tab" id="end-time">10:00 AM</option>
-                            <option value="4" class="time-tab" id="end-time">10:30 AM</option>
-                            <option value="5" class="time-tab" id="end-time">11:00 AM</option>
-                            <option value="6" class="time-tab" id="end-time">11:30 AM</option>
-                            <option value="7" class="time-tab" id="end-time">12:00 PM</option>
-                            <option value="8" class="time-tab" id="end-time">12:30 PM</option>
-                            <option value="9" class="time-tab" id="end-time">1:00 PM</option>
-                            <option value="10" class="time-tab" id="end-time">1:30 PM</option>
-                            <option value="11" class="time-tab" id="end-time">2:00 PM</option>
-                            <option value="12" class="time-tab" id="end-time">2:30 PM</option>
-                            <option value="13" class="time-tab" id="end-time">3:00 PM</option>
-                            <option value="14" class="time-tab" id="end-time">3:30 PM</option>
-                            <option value="15" class="time-tab" id="end-time">4:00 PM</option>
-                            <option value="16" class="time-tab" id="end-time">4:30 PM</option>
-                            <option value="17" class="time-tab" id="end-time">5:00 PM</option>
-                            <option value="18" class="time-tab" id="end-time">5:30 PM</option>
-                            <option value="19" class="time-tab" id="end-time">6:00 PM</option>
-                            <option value="20" class="time-tab" id="end-time">6:30 PM</option>
-                            <option value="21" class="time-tab" id="end-time">7:00 PM</option>
-                            <option value="22" class="time-tab" id="end-time">7:30 PM</option>
-                            <option value="23" class="time-tab" id="end-time">8:00 PM</option>
-                            <option value="24" class="time-tab" id="end-time">8:30 PM</option>
-                            <option value="25" class="time-tab" id="end-time">9:00 PM</option>
+                            <option value="2" class="time-tab" id="end-time">9:15 AM</option>
+                            <option value="3" class="time-tab" id="end-time">9:30 AM</option>
+                            <option value="4" class="time-tab" id="end-time">9:45 AM</option>
+                            <option value="5" class="time-tab" id="end-time">10:00 AM</option>
+                            <option value="6" class="time-tab" id="end-time">10:15 AM</option>
+                            <option value="7" class="time-tab" id="end-time">10:30 AM</option>
+                            <option value="8" class="time-tab" id="end-time">10:45 AM</option>
+                            <option value="9" class="time-tab" id="end-time">11:00 AM</option>
+                            <option value="10" class="time-tab" id="end-time">11:15 AM</option>
+                            <option value="11" class="time-tab" id="end-time">11:30 AM</option>
+                            <option value="12" class="time-tab" id="end-time">11:45 AM</option>
+                            <option value="13" class="time-tab" id="end-time">12:00 PM</option>
+                            <option value="14" class="time-tab" id="end-time">12:15 PM</option>
+                            <option value="15" class="time-tab" id="end-time">12:30 PM</option>
+                            <option value="16" class="time-tab" id="end-time">12:45 PM</option>
+                            <option value="17" class="time-tab" id="end-time">1:00 PM</option>
+                            <option value="18" class="time-tab" id="end-time">1:15 PM</option>
+                            <option value="19" class="time-tab" id="end-time">1:30 PM</option>
+                            <option value="20" class="time-tab" id="end-time">1:45 PM</option>
+                            <option value="21" class="time-tab" id="end-time">2:00 PM</option>
+                            <option value="22" class="time-tab" id="end-time">2:15 PM</option>
+                            <option value="23" class="time-tab" id="end-time">2:30 PM</option>
+                            <option value="24" class="time-tab" id="end-time">2:45 PM</option>
+                            <option value="25" class="time-tab" id="end-time">3:00 PM</option>
+                            <option value="26" class="time-tab" id="end-time">3:15 PM</option>
+                            <option value="27" class="time-tab" id="end-time">3:30 PM</option>
+                            <option value="28" class="time-tab" id="end-time">3:45 PM</option>
+                            <option value="29" class="time-tab" id="end-time">4:00 PM</option>
+                            <option value="30" class="time-tab" id="end-time">4:15 PM</option>
+                            <option value="31" class="time-tab" id="end-time">4:30 PM</option>
+                            <option value="32" class="time-tab" id="end-time">4:45 PM</option>
+                            <option value="33" class="time-tab" id="end-time">5:00 PM</option>
+                            <option value="34" class="time-tab" id="end-time">5:15 PM</option>
+                            <option value="35" class="time-tab" id="end-time">5:30 PM</option>
+                            <option value="36" class="time-tab" id="end-time">5:45 PM</option>
+                            <option value="37" class="time-tab" id="end-time">6:00 PM</option>
+                            <option value="38" class="time-tab" id="end-time">6:15 PM</option>
+                            <option value="39" class="time-tab" id="end-time">6:30 PM</option>
+                            <option value="40" class="time-tab" id="end-time">6:45 PM</option>
+                            <option value="41" class="time-tab" id="end-time">7:00 PM</option>
+                            <option value="42" class="time-tab" id="end-time">7:15 PM</option>
+                            <option value="43" class="time-tab" id="end-time">7:30 PM</option>
+                            <option value="44" class="time-tab" id="end-time">7:45 PM</option>
+                            <option value="45" class="time-tab" id="end-time">8:00 PM</option>
+                            <option value="46" class="time-tab" id="end-time">8:15 PM</option>
+                            <option value="47" class="time-tab" id="end-time">8:30 PM</option>
+                            <option value="48" class="time-tab" id="end-time">8:45 PM</option>
+                            <option value="49" class="time-tab" id="end-time">9:00 PM</option>
                         </select>
-                        <button typ="submit" onclick="getEvent(event)">Create</button>
-                       
-                        <script src="assets/js/app.js"></script>
+                        <button type="submit" onclick="getEvent(event)">Create</button>
+                        <script src="assets/js/timeScroll.js"></script>
+                        
+
                     </form>
                  </div>
             </nav>
@@ -100,20 +149,49 @@
 
                 <div class="grid-rows" id="time-grid-rows">
                     <div class="container-grid-block" id="container-grid-block-time"><h4>9:00 AM</h4></div>
-                    
+                    <div class="container-grid-block" id="container-grid-block-time"><h4>10:00 AM</h4></div>
+                    <div class="container-grid-block" id="container-grid-block-time"><h4>11:00 AM</h4></div>
+                    <div class="container-grid-block" id="container-grid-block-time"><h4>12:00 PM</h4></div>
+                    <div class="container-grid-block" id="container-grid-block-time"><h4>1:00 PM</h4></div>
+                    <div class="container-grid-block" id="container-grid-block-time"><h4>2:00 PM</h4></div>
+                    <div class="container-grid-block" id="container-grid-block-time"><h4>3:00 PM</h4></div>
+                    <div class="container-grid-block" id="container-grid-block-time"><h4>4:00 PM</h4></div>
+                    <div class="container-grid-block" id="container-grid-block-time"><h4>5:00 PM</h4></div>
+                    <div class="container-grid-block" id="container-grid-block-time"><h4>6:00 PM</h4></div>
+                    <div class="container-grid-block" id="container-grid-block-time"><h4>7:00 PM</h4></div>
+                    <div class="container-grid-block" id="container-grid-block-time"><h4>8:00 PM</h4></div>
+                    <div class="container-grid-block" id="container-grid-block-time"><h4>9:00 PM</h4></div>
                 </div>
 
                 <div class="grid-rows" id="monday-grid-rows">
-                    <div class="container-grid-block" id="container-grid-block" value="">+</div>
-                    <div class="container-grid-block" id="container-grid-block">+</div>
-                    <div class="container-grid-block" id="container-grid-block">+</div>
-                    <div class="container-grid-block" id="container-grid-block">+</div>
-                    <div class="container-grid-block" id="container-grid-block">+</div>
-                    <div class="container-grid-block" id="container-grid-block">+</div>
-                    <div class="container-grid-block" id="container-grid-block">+</div>
-                    <div class="container-grid-block" id="container-grid-block">+</div>
-                    <div class="container-grid-block" id="container-grid-block">+</div>
-                    <div class="container-grid-block" id="container-grid-block">+</div>
+                    <div class="container-grid-block" id="container-grid-block" start="9" end="10"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="10" end="11"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="11" end="12"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="12" end="13"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="13" end="14"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="14" end="15"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="15" end="16"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="16" end="17"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="17" end="18"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="18" end="19"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="19" end="20"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="20" end="21"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="21" end="22"></div>
+                </div>
+                <div class="grid-rows" id="tuesday-grid-rows">
+                    <div class="container-grid-block" id="container-grid-block" start="9" end="10"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="10" end="11"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="11" end="12"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="12" end="13"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="13" end="14"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="14" end="15"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="15" end="16"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="16" end="17"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="17" end="18"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="18" end="19"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="19" end="20"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="20" end="21"></div>
+                    <div class="container-grid-block" id="container-grid-block" start="21" end="22"></div>
                 </div>
                 
 

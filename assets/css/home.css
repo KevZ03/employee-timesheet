@@ -6,7 +6,6 @@
 
     justify-items: stretch;
     align-items: stretch;
-    background-color: aqua;
     margin: 1em;
     border: 1px solid black;
 
@@ -26,13 +25,21 @@
 
 
 .grid-rows {
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, .7);
     
 }
 
 .container-grid-block {
-    border: 1px solid black;
-    margin: 5px;
-    padding-top: 0.4em;
-    padding-bottom: 0.4em;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    min-width: 50px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    font-size: 2cqw;
+    word-break: keep-all;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+
 }
